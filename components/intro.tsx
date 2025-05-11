@@ -1,17 +1,19 @@
 "use client";
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import hanlin from "@/public/hanlin.png";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
+  const {ref} = useSectionInView("Home");
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id="home">
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id="home" ref={ref}>
         <div className="flex items-center justify-center">
             <div className="relative">
                 <motion.div
