@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '@/components/header';
 import ActiveSectionContextProvider from '@/context/active-section-context';
+import Footer from '@/components/footer';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Header/>
           {children}
           <Toaster position="top-right" />
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>
